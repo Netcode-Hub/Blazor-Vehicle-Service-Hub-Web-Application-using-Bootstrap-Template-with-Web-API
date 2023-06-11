@@ -1,0 +1,42 @@
+﻿@BlazorServer.CarService.Api_HostAddress = https://localhost:7114
+
+GET {{BlazorServer.CarService.Api_HostAddress}}/api/booking
+
+###
+
+POST {{BlazorServer.CarService.Api_HostAddress}}/api/booking
+Content-Type: application/json
+
+{
+  "name": "Hughes Fredericks",
+  "phoneNumber": 123456,
+  "serviceType": "Oil Changing",
+  "machineType": "Car",
+  "email": "Hughes@Hughes.com",
+  "bookDate": "2023-06-10T06:08:35.736Z",
+  "specialRequest": "Nothing",
+  "dateBooked": "2023-06-10T06:08:35.737Z"
+}
+
+###
+
+POST {{BlazorServer.CarService.Api_HostAddress}}/api/service
+Content-Type: application/json
+
+{
+  "name":"Oil Changing"
+}
+
+###
+
+GET {{BlazorServer.CarService.Api_HostAddress}}/api/service
+
+###
+
+DELETE {{BlazorServer.CarService.Api_HostAddress}}/api/service?id=5
+
+###
+
+GET {{BlazorServer.CarService.Api_HostAddress}}/api/booking
+
+###
